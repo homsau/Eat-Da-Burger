@@ -1,0 +1,40 @@
+.jumbotron-border {
+    border: 5px solid #333;
+}
+.jumbotron.main-jumbotron {
+    background-color: #f6e124 !important;
+    border: 5px #333 solid;
+    border-radius: 0 !important;
+    outline: 15px solid #ea2030;
+    margin: 15px;
+}
+.container {
+    padding: 4% 5.5%;
+}
+.row {
+    padding: 2% 0;
+}
+.burger-list {
+    list-style-type: none;
+    padding-left: 0;
+
+}
+.burger-list li form {
+    line-height: 60px;
+    padding: 10px;
+    display: inline;
+}
+.burger-list li form button {
+    background-color: transparent;
+    border: none;
+    background: url("/assets/img/burger-top.png");
+    background-size: 80px;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-weight: bold;
+    width: 80px;
+}
+.burger-list li form button:hover {
+    background-color: transparent;
+    opacity: 0.5;
+}
