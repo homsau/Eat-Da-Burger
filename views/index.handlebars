@@ -10,17 +10,28 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-4">
       <h2>Burgers Available To Eat!</h2>
       <ul class="burger-list">
         {{#each burgers}}
-          {{#unless this.devoured}}
+          {{#unless devoured}}
             <li>
-              <!--{{this.id}}-->
-              {{this.burger_name}}
+              {{burger_name}}
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
 
+    <div class="col-lg-4">
+      <h2>&nbsp;</h2>
+      <ul class="burger-list customer">
+        {{#each burgers}}
+          {{#unless devoured}}
+            <li>
               <form action="/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="true">
+                <input type="text" name="customer" placeholder="Customer?" required>
                 <button class="btn-primary burger-button" type="submit">Eat!</button>
               </form>
             </li>
@@ -28,16 +39,14 @@
         {{/each}}
       </ul>
     </div>
-
-    <div class="col-lg-6">
-      <h2>Burgers That Have Been Eaten!</h2>
+    
+    <div class="col-lg-4">
+      <h2>Already Eaten!</h2>
       <ul>
         {{#each burgers}}
-          {{#if this.devoured}}
+          {{#if devoured}}
             <li>
-              <!--{{this.id}}-->
-              {{this.burger_name}}
-
+              {{burger_name}} (eaten by {{customer}})
             </li>
           {{/if}}
         {{/each}}
