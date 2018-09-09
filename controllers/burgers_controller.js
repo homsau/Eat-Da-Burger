@@ -30,8 +30,8 @@ router.put("/:id", function(req, res) {
   console.log("condition", condition);
   console.log(typeof customer);
   burger.update({
-    devoured: req.body.devoured,
-    customer: "'" + req.body.customer + "'"
+    devoured: req.body.devoured//,
+    // customer: "'" + req.body.customer + "'"
   }, condition, function() {
     res.redirect("/");
   });

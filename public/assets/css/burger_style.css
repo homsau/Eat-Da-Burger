@@ -24,6 +24,9 @@
 .burger-list.customer {
     text-align: center;
 }
+.burger-list form {
+    display: inline;
+}
 .burger-list li form input {
     line-height: 40px;
 }
